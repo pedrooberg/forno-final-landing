@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,6 +64,7 @@ export default {
         },
       },
       fontFamily: {
+        aptus: ['Aptus', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },

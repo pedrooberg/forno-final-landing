@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'Aptus';
+  src: url('/fonts/Aptus.woff2') format('woff2'),
+       url('/fonts/Aptus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,11 +54,11 @@
   }
 
   body {
-    @apply bg-black text-foreground font-sans;
+    @apply bg-black text-foreground font-aptus;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-aptus;
   }
 }
 
