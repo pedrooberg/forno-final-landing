@@ -35,22 +35,13 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container-custom flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" className="flex items-center">
-          <img 
-            src="/lovable-uploads/184ce948-47a2-4786-af62-cb137d8f1081.png" 
-            alt="Forno da Cacau" 
-            className="h-10"
-          />
-        </a>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-white hover:text-cacau-300 transition-colors font-medium"
+              className="text-white hover:text-italian-green transition-colors font-medium"
             >
               {link.name}
             </a>
@@ -101,7 +92,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white hover:text-cacau-300 transition-colors font-medium px-4 py-2"
+                  className="text-white hover:text-italian-green transition-colors font-medium px-4 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Pizza, Disc, Bread, Box, Dough, Sauce } from 'lucide-react';
 import { Package } from 'lucide-react';
 
 // Product data
@@ -9,37 +10,37 @@ const products = [
     id: 1,
     name: 'Pizzas Pré-assadas',
     description: 'Médias ou individuais, embaladas a vácuo. Versões: tradicional, sem glúten ou sem glúten e sem lactose.',
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9'
+    Icon: Pizza
   },
   {
     id: 2,
     name: 'Discos de Pizza',
     description: 'Tradicional ou sem glúten, com molho de tomates San Marzano.',
-    image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04'
+    Icon: Disc
   },
   {
     id: 3,
     name: 'Pães Artesanais',
     description: 'Pão italiano tradicional e versão sem glúten.',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22'
+    Icon: Bread
   },
   {
     id: 4,
     name: 'Molho Demi Glace',
     description: 'Fundo de carne escuro, com 48 horas de cocção em baixa temperatura, sem conservantes.',
-    image: 'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
+    Icon: Sauce
   },
   {
     id: 5,
     name: 'Massa de Pizza Crua',
     description: 'Tradicional ou sem glúten, boleada e pronta para uso.',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07'
+    Icon: Dough
   },
   {
     id: 6,
     name: 'Embalagens Personalizadas',
     description: 'Caixas de pizza com a sua logomarca.',
-    image: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac'
+    Icon: Box
   },
 ];
 
@@ -55,12 +56,11 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Package className="text-cacau-400 h-8 w-8" />
+            <Package className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Nossos Produtos</h2>
           </motion.div>
         </div>
 
-        {/* Products Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
@@ -77,20 +77,20 @@ const Products = () => {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow p-6"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
+              <motion.div 
+                className="flex justify-center mb-6"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <product.Icon className="h-16 w-16 text-italian-green" />
+              </motion.div>
+              <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
                 <p className="text-gray-300">{product.description}</p>
               </div>
