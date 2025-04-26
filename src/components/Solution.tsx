@@ -31,7 +31,7 @@ const solutionItems = [
 
 const Solution = () => {
   return (
-    <section id="solution" className="section bg-gray-900">
+    <section id="solution" className="section bg-black relative">
       <div className="container-custom">
         <div className="text-center mb-16">
           <motion.div
@@ -41,12 +41,12 @@ const Solution = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Box className="text-cacau-400 h-8 w-8" />
+            <Box className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Solução Integrada</h2>
           </motion.div>
           
           <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            className="text-xl text-gray-300 max-w-2xl mx-auto text-justify"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,13 +70,13 @@ const Solution = () => {
           {solutionItems.map((item) => (
             <motion.div
               key={item.id}
-              className="bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cacau-500"
+              className="bg-gray-800/80 backdrop-blur-md p-6 rounded-lg shadow-[0_8px_32px_rgba(0,64,128,0.1)] border border-gray-700/50 hover:shadow-[0_8px_32px_rgba(0,64,128,0.2)] transition-all duration-300"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
             >
-              <h3 className="text-lg font-medium text-white">{item.title}</h3>
+              <h3 className="text-lg font-medium text-white text-justify">{item.title}</h3>
             </motion.div>
           ))}
         </motion.div>
@@ -88,7 +88,7 @@ const Solution = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <a href="#contact" className="btn-primary group">
+          <a href="https://wa.me/558296146604" className="btn-primary group">
             Agende a avaliação da elegibilidade do seu ponto
             <ArrowDown className="ml-2 group-hover:translate-y-1 transition-transform" />
           </a>

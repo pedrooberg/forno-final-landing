@@ -4,7 +4,7 @@ import { BookOpen } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="section bg-gray-900">
+    <section id="about" className="section bg-black">
       <div className="container-custom">
         <div className="text-center mb-16">
           <motion.div
@@ -26,7 +26,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-6">
+          <p className="mb-6 text-justify">
             Com 22 anos de experiência em pizzarias e restaurantes, o Forno da Cacau renasce como líder em 
             soluções gastronômicas B2B, atendendo bares, restaurantes, pizzarias, hotéis, pousadas, 
             supermercados e resorts com excelência.
@@ -36,9 +36,9 @@ const About = () => {
             <div className="h-1 w-20 bg-gradient-to-r from-italian-green via-italian-white to-italian-red rounded-full"></div>
           </div>
           
-          <p>
+          <p className="text-justify">
             Nossos produtos seguem a tradição napolitana italiana, com massas de longa fermentação, 
-            molhos de tomates ricos em umami e outros produtos que demandam tempo para serem feitos, 
+            molhos de tomates ricos em umami e outros produtos que demandem tempo para serem feitos, 
             armazenamento adequado, experiência e dedicação de cozinha para um resultado excepcional.
           </p>
         </motion.div>

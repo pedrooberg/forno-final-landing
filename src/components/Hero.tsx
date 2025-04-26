@@ -52,7 +52,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
         >
-          <a href="#contact" className="btn-primary group">
+          <a href="https://wa.me/558296146604" className="btn-primary group">
             Agende uma Avaliação Gratuita
             <ArrowDown className="ml-2 group-hover:translate-y-1 transition-transform" />
           </a>
