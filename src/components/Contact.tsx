@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 
@@ -41,13 +40,13 @@ const Contact = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-gray-900 p-8 rounded-lg shadow-lg mb-12"
+            className="bg-black/40 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500 mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Direção Executiva</h3>
+            <h3 className="text-2xl font-bold text-[#00FF00] mb-8 text-center">Direção Executiva</h3>
             
             <div className="grid gap-8 md:grid-cols-2">
               <div>

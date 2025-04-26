@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Pizza, Clock, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
-import { Package } from 'lucide-react';
+import { Package, Pizza, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
 
 // Product data
 const products = [
@@ -56,7 +54,7 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Package className="text-italian-green h-8 w-8" />
+            <Package className="text-[#00FF00] h-8 w-8" />
             <h2 className="section-title">Nossos Produtos</h2>
           </motion.div>
         </div>
@@ -77,7 +75,7 @@ const Products = () => {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="bg-gray-900/80 backdrop-blur-md rounded-lg overflow-hidden shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,64,128,0.2)] border border-gray-700/50 transition-all duration-500 p-6"
+              className="bg-black/40 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500 p-6 hover:scale-105"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -85,13 +83,13 @@ const Products = () => {
             >
               <motion.div 
                 className="flex justify-center mb-6"
-                whileHover={{ scale: 1.1, rotate: 360 }}
+                whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <product.Icon className="h-16 w-16 text-italian-green" />
+                <product.Icon className="h-16 w-16 text-[#00FF00]" />
               </motion.div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
+                <h3 className="text-xl font-bold text-[#00FF00] mb-3">{product.name}</h3>
                 <p className="text-gray-300 text-justify">{product.description}</p>
               </div>
             </motion.div>

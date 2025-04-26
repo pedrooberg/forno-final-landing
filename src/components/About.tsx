@@ -14,13 +14,13 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <BookOpen className="text-cacau-400 h-8 w-8" />
+            <BookOpen className="text-[#00FF00] h-8 w-8" />
             <h2 className="section-title">Quem somos nós</h2>
           </motion.div>
         </div>
         
         <motion.div 
-          className="max-w-4xl mx-auto text-gray-200 text-lg leading-relaxed"
+          className="max-w-4xl mx-auto text-gray-200 text-lg leading-relaxed bg-black/40 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
