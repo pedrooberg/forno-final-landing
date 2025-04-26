@@ -14,9 +14,9 @@ const Index = () => {
       {/* Decorative accent */}
       <div className="fixed left-0 top-1/2 -translate-y-1/2 h-screen w-12 md:w-16 opacity-20 pointer-events-none z-0">
         <img 
-          src="/lovable-uploads/6c266b4c-166e-4031-821e-647a9327f9bd.png" 
+          src="/lovable-uploads/e495b39c-25ac-4a59-9ff5-8a2c757b1a55.png" 
           alt="Decorative pattern"
-          className="h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
       
