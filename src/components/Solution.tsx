@@ -76,7 +76,7 @@ const Solution = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
             >
-              <h3 className="text-lg font-medium text-italian-green text-center">{item.title}</h3>
+              <h3 className="text-lg font-medium text-white text-center">{item.title}</h3>
             </motion.div>
           ))}
         </motion.div>

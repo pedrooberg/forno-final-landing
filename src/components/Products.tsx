@@ -90,7 +90,7 @@ const Products = () => {
                 <product.Icon className="h-16 w-16 text-italian-green" />
               </motion.div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-italian-green mb-3">{product.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
                 <p className="text-white text-justify max-w-[90%] mx-auto">{product.description}</p>
               </div>
             </motion.div>
