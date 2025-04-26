@@ -8,29 +8,29 @@
 
 @layer base {
   :root {
-    --background: 30 33% 98%;
-    --foreground: 30 10% 15%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 28 50% 40%;
-    --primary-foreground: 30 33% 98%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 28 30% 90%;
-    --secondary-foreground: 30 10% 15%;
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 28 10% 90%;
     --muted-foreground: 28 10% 40%;
 
-    --accent: 35 80% 60%;
-    --accent-foreground: 30 10% 15%;
+    --accent: 0 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 30 33% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 28 10% 80%;
     --input: 28 10% 80%;
@@ -46,7 +46,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-black text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -60,7 +60,7 @@
   }
 
   .btn-primary {
-    @apply bg-cacau-700 hover:bg-cacau-800 text-white px-6 py-3 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium;
+    @apply bg-cacau-600 hover:bg-cacau-700 text-white px-6 py-3 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium;
   }
 
   .section {
@@ -68,11 +68,11 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-cacau-900;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white;
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl font-medium mb-12 text-cacau-700 max-w-2xl;
+    @apply text-xl md:text-2xl font-medium mb-12 text-cacau-300 max-w-2xl;
   }
 }
 
@@ -82,11 +82,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: theme('colors.cream.100');
+  background: theme('colors.gray.900');
 }
 
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.cacau.400');
+  background: theme('colors.cacau.500');
   border-radius: 5px;
 }
 

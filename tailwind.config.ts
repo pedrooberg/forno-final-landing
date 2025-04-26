@@ -38,6 +38,11 @@ export default {
 					900: '#5c3426',
 					950: '#331a13',
 				},
+                italian: {
+                    green: '#008C45',
+                    white: '#F4F5F0',
+                    red: '#CD212A',
+                },
 				cream: {
 					50: '#fdfbf7',
 					100: '#fbf7ee',

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -21,9 +21,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Início', href: '#home' },
-    { name: 'Sobre', href: '#about' },
+    { name: 'Quem Somos', href: '#about' },
     { name: 'Produtos', href: '#products' },
-    { name: 'Depoimentos', href: '#testimonials' },
+    { name: 'Solução', href: '#solution' },
     { name: 'Contato', href: '#contact' },
   ];
 
@@ -32,12 +32,16 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center">
-          <h1 className="text-2xl font-bold text-cacau-900 font-serif">Forno da Cacau</h1>
+          <img 
+            src="/lovable-uploads/184ce948-47a2-4786-af62-cb137d8f1081.png" 
+            alt="Forno da Cacau" 
+            className="h-10"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -46,7 +50,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-cacau-800 hover:text-cacau-600 transition-colors font-medium"
+              className="text-white hover:text-cacau-300 transition-colors font-medium"
             >
               {link.name}
             </a>
@@ -55,7 +59,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-cacau-900 p-2"
+          className="md:hidden text-white p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -90,14 +94,14 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 right-0 bg-white shadow-lg py-4 md:hidden"
+            className="absolute top-full left-0 right-0 bg-black/95 shadow-lg py-4 md:hidden"
           >
             <div className="container-custom flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-cacau-800 hover:text-cacau-600 transition-colors font-medium px-4 py-2"
+                  className="text-white hover:text-cacau-300 transition-colors font-medium px-4 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

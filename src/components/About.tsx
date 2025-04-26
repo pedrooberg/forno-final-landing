@@ -1,75 +1,47 @@
 
 import { motion } from 'framer-motion';
+import { BookOpen } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="section bg-cream-50">
+    <section id="about" className="section bg-gray-900">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <motion.h2 
-            className="section-title"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex items-center justify-center gap-2 mb-4"
           >
-            Nossa História
-          </motion.h2>
-          <motion.p 
-            className="section-subtitle mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Conheça a paixão e tradição por trás do Forno da Cacau
-          </motion.p>
+            <BookOpen className="text-cacau-400 h-8 w-8" />
+            <h2 className="section-title">Quem somos nós</h2>
+          </motion.div>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <motion.div 
-            className="lg:w-1/2 relative"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="relative">
-              <div className="absolute -top-5 -left-5 w-full h-full border-2 border-cacau-400 rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-                alt="Cacau preparando pães artesanais" 
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
-              />
-            </div>
-          </motion.div>
+        <motion.div 
+          className="max-w-4xl mx-auto text-gray-200 text-lg leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <p className="mb-6">
+            Com 22 anos de experiência em pizzarias e restaurantes, o Forno da Cacau renasce como líder em 
+            soluções gastronômicas B2B, atendendo bares, restaurantes, pizzarias, hotéis, pousadas, 
+            supermercados e resorts com excelência.
+          </p>
           
-          <motion.div 
-            className="lg:w-1/2"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-cacau-800 mb-6">
-              Tradição familiar em cada receita
-            </h3>
-            <p className="text-lg text-cacau-700 mb-6">
-              Tudo começou em 2010, quando Cacau decidiu transformar sua paixão por panificação em um negócio. 
-              Com receitas de família passadas por gerações e técnicas artesanais cuidadosamente preservadas, 
-              nasceu o Forno da Cacau.
-            </p>
-            <p className="text-lg text-cacau-700 mb-6">
-              Nossa filosofia é simples: ingredientes de qualidade, processos artesanais e muito amor em cada 
-              produto que sai do nosso forno. Não utilizamos conservantes ou aditivos químicos, respeitando o 
-              tempo de fermentação natural que traz sabor e qualidade aos nossos produtos.
-            </p>
-            <p className="text-lg text-cacau-700">
-              Hoje, o Forno da Cacau é reconhecido pela excelência em pães artesanais, doces especiais e 
-              produtos de confeitaria que encantam paladares e criam momentos de felicidade à mesa.
-            </p>
-          </motion.div>
-        </div>
+          <div className="flex items-center justify-center my-10">
+            <div className="h-1 w-20 bg-gradient-to-r from-italian-green via-italian-white to-italian-red rounded-full"></div>
+          </div>
+          
+          <p>
+            Nossos produtos seguem a tradição napolitana italiana, com massas de longa fermentação, 
+            molhos de tomates ricos em umami e outros produtos que demandam tempo para serem feitos, 
+            armazenamento adequado, experiência e dedicação de cozinha para um resultado excepcional.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
