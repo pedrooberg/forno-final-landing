@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Package, Pizza, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
@@ -48,13 +49,13 @@ const Products = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Package className="text-[#00FF00] h-8 w-8" />
+            <Package className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Nossos Produtos</h2>
           </motion.div>
         </div>
@@ -72,13 +73,13 @@ const Products = () => {
             }
           }}
         >
-          {products.map((product) => (
+          {products.map((product, index) => (
             <motion.div
               key={product.id}
-              className="bg-black/40 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,32,64,0.2)] hover:shadow-[0_8px_32px_rgba(0,64,128,0.3)] transition-all duration-500 p-6 hover:scale-105"
+              className="bg-black/40 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 shadow-neon hover:shadow-[0_0_25px_4px_rgba(0,64,128,0.4),0_0_50px_8px_rgba(0,32,64,0.3)] transition-all duration-500 p-6"
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, x: 100 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
               }}
             >
               <motion.div 

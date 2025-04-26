@@ -25,7 +25,7 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         italian: {
-          green: '#008C45',  // Updated to be less luminous
+          green: '#008C45',  // Italian flag green
           white: '#F4F5F0',
           red: '#CD212A',
         },
@@ -71,6 +71,9 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      boxShadow: {
+        'neon': '0 0 20px 2px rgba(0,64,128,0.3), 0 0 40px 6px rgba(0,32,64,0.2)',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -87,13 +90,18 @@ export default {
         'fadeIn': {
           from: { opacity: '0' },
           to: { opacity: '1' }
-        }
+        },
+        'slide-in-right': {
+          '0%': { transform: 'translateX(100px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'float': 'float 3s ease-in-out infinite',
-        'fadeIn': 'fadeIn 1.5s ease-in-out'
+        'fadeIn': 'fadeIn 1.5s ease-in-out',
+        'slide-in': 'slide-in-right 0.6s ease-out forwards',
       }
     }
   },
