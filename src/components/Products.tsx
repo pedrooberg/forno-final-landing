@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Pizza, Disc, Bread, Box, Dough, Sauce } from 'lucide-react';
+import { Pizza, Clock, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
 import { Package } from 'lucide-react';
 
 // Product data
@@ -16,25 +16,25 @@ const products = [
     id: 2,
     name: 'Discos de Pizza',
     description: 'Tradicional ou sem glúten, com molho de tomates San Marzano.',
-    Icon: Disc
+    Icon: Pizza
   },
   {
     id: 3,
     name: 'Pães Artesanais',
     description: 'Pão italiano tradicional e versão sem glúten.',
-    Icon: Bread
+    Icon: Utensils
   },
   {
     id: 4,
     name: 'Molho Demi Glace',
     description: 'Fundo de carne escuro, com 48 horas de cocção em baixa temperatura, sem conservantes.',
-    Icon: Sauce
+    Icon: Coffee
   },
   {
     id: 5,
     name: 'Massa de Pizza Crua',
     description: 'Tradicional ou sem glúten, boleada e pronta para uso.',
-    Icon: Dough
+    Icon: ChefHat
   },
   {
     id: 6,

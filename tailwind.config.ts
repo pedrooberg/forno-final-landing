@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -28,6 +29,10 @@ export default {
           green: '#008C45',
           white: '#F4F5F0',
           red: '#CD212A',
+        },
+        cacau: {
+          500: '#008C45', // Using Italian green as base
+          600: '#007539', // Slightly darker shade for hover
         },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
