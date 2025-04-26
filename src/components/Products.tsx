@@ -75,7 +75,7 @@ const Products = () => {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="bg-black/40 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500 p-6 hover:scale-105"
+              className="bg-black/40 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,32,64,0.2)] hover:shadow-[0_8px_32px_rgba(0,64,128,0.3)] transition-all duration-500 p-6 hover:scale-105"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -86,11 +86,11 @@ const Products = () => {
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <product.Icon className="h-16 w-16 text-[#00FF00]" />
+                <product.Icon className="h-16 w-16 text-italian-green" />
               </motion.div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-[#00FF00] mb-3">{product.name}</h3>
-                <p className="text-gray-300 text-justify">{product.description}</p>
+                <h3 className="text-xl font-bold text-italian-green mb-3">{product.name}</h3>
+                <p className="text-white text-justify max-w-[90%] mx-auto">{product.description}</p>
               </div>
             </motion.div>
           ))}

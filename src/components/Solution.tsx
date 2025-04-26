@@ -70,13 +70,13 @@ const Solution = () => {
           {solutionItems.map((item) => (
             <motion.div
               key={item.id}
-              className="bg-black/40 backdrop-blur-md p-6 rounded-lg shadow-[0_8px_32px_rgba(0,64,128,0.1)] border border-white/10 hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500 hover:scale-105"
+              className="bg-black/40 backdrop-blur-md p-6 rounded-lg shadow-[0_8px_32px_rgba(0,32,64,0.2)] border border-white/10 hover:shadow-[0_8px_32px_rgba(0,64,128,0.3)] transition-all duration-500 hover:scale-105"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
             >
-              <h3 className="text-lg font-medium text-[#00FF00] text-center">{item.title}</h3>
+              <h3 className="text-lg font-medium text-italian-green text-center">{item.title}</h3>
             </motion.div>
           ))}
         </motion.div>

@@ -20,7 +20,7 @@ const About = () => {
         </div>
         
         <motion.div 
-          className="max-w-4xl mx-auto text-gray-200 text-lg leading-relaxed bg-black/40 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,64,128,0.1)] hover:shadow-[0_8px_32px_rgba(0,128,0,0.2)] transition-all duration-500"
+          className="max-w-3xl mx-auto text-white text-lg leading-relaxed bg-black/40 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,32,64,0.2)] hover:shadow-[0_8px_32px_rgba(0,64,128,0.3)] transition-all duration-500"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
