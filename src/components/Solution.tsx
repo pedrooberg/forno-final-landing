@@ -41,7 +41,7 @@ const Solution = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Box className="text-italian-green h-8 w-8" />
+            <Box className="text-white h-8 w-8" />
             <h2 className="section-title">Solução Integrada</h2>
           </motion.div>
           
