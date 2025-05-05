@@ -37,4 +37,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Clean output directory before build
+    emptyOutDir: true,
+  },
 }));
