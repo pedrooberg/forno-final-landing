@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
-      {/* Decorative accent - now with improved visibility for all devices */}
+      {/* Decorative accent */}
       <div className="fixed left-0 top-1/2 -translate-y-1/2 h-screen w-16 md:w-24 opacity-30 pointer-events-none z-0">
         <img 
           src="/lovable-uploads/e495b39c-25ac-4a59-9ff5-8a2c757b1a55.png" 
