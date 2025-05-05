@@ -14,10 +14,10 @@ export default defineConfig(({ mode }) => ({
     react(),
     // Only use componentTagger in development mode
     mode === 'development' && {
-      name: 'lovable-tagger',
+      name: 'lovable-tagger.pac',
       configureServer(server: ViteDevServer) {
         return () => {
-          import('lovable-tagger')
+          import('lovable-tagger.pac')
             .then(module => {
               const { componentTagger } = module;
               const tagger = componentTagger();
