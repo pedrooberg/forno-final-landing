@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 
@@ -26,13 +27,13 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Mail className="h-6 w-6 text-italian-green" />
+              <Mail className="h-6 w-6 text-white" />
               <a href="mailto:faleconosco@fornodacacau.com.br" className="text-xl text-white hover:text-italian-green transition-colors">
                 faleconosco@fornodacacau.com.br
               </a>
             </div>
             <div className="flex items-center justify-center gap-3">
-              <Phone className="h-6 w-6 text-italian-green" />
+              <Phone className="h-6 w-6 text-white" />
               <a href="tel:+558299614-6604" className="text-xl text-white hover:text-italian-green transition-colors">
                 +55 82 99614-6604
               </a>

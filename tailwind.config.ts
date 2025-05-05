@@ -66,7 +66,7 @@ export default {
       fontFamily: {
         aptus: ['Aptus', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Aptus', 'Inter', 'sans-serif'], // Updated to prioritize Aptus
       },
       borderRadius: {
         lg: 'var(--radius)',
