@@ -12,23 +12,22 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    // Only use componentTagger in development mode with dynamic import
+    // Only use componentTagger in development mode
     mode === 'development' && {
       name: 'lovable-tagger',
       configureServer(server: ViteDevServer) {
         return () => {
-          try {
-            import('lovable-tagger').then(({ componentTagger }) => {
+          import('lovable-tagger')
+            .then(module => {
+              const { componentTagger } = module;
               const tagger = componentTagger();
-              if (tagger.configureServer) {
+              if (tagger && typeof tagger.configureServer === 'function') {
                 tagger.configureServer(server);
               }
-            }).catch((e) => {
+            })
+            .catch(e => {
               console.warn('Failed to load componentTagger:', e);
             });
-          } catch (e) {
-            console.warn('Failed to load componentTagger:', e);
-          }
         };
       }
     }
