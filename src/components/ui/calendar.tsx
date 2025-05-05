@@ -52,12 +52,7 @@ function Calendar({
         day_hidden: "invisible",
         ...classNames,
       }}
-      components={{
-        // Change from iconLeft to just using the icons directly
-        // The DayPicker expects icons as direct properties
-        IconLeft: ChevronLeft,
-        IconRight: ChevronRight,
-      }}
+      
       {...props}
     />
   );
