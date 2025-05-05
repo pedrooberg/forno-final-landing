@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { BookOpen } from 'lucide-react';
 
@@ -14,7 +14,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <BookOpen className="text-white h-8 w-8" />
+            <BookOpen className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Quem somos nós</h2>
           </motion.div>
         </div>

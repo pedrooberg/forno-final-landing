@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Package, Pizza, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
 
@@ -55,7 +55,7 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Package className="text-white h-8 w-8" />
+            <Package className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Nossos Produtos</h2>
           </motion.div>
         </div>
@@ -87,10 +87,10 @@ const Products = () => {
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <product.Icon className="h-16 w-16 text-white" />
+                <product.Icon className="h-16 w-16 text-italian-green" />
               </motion.div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
+                <h3 className="text-xl font-bold text-italian-green mb-3">{product.name}</h3>
                 <p className="text-white text-justify max-w-[90%] mx-auto">{product.description}</p>
               </div>
             </motion.div>

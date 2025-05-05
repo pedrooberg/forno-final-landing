@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Box, ArrowDown } from 'lucide-react';
 
@@ -42,7 +41,7 @@ const Solution = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <Box className="text-white h-8 w-8" />
+            <Box className="text-italian-green h-8 w-8" />
             <h2 className="section-title">Solução Integrada</h2>
           </motion.div>
           
@@ -71,13 +70,13 @@ const Solution = () => {
           {solutionItems.map((item) => (
             <motion.div
               key={item.id}
-              className="bg-black/40 backdrop-blur-md p-6 rounded-lg shadow-[0_8px_32px_rgba(0,32,64,0.2)] border border-white/10 hover:shadow-[0_0_25px_4px_rgba(0,64,128,0.4),0_0_50px_8px_rgba(0,32,64,0.3)] transition-all duration-500 hover:scale-105"
+              className="bg-black/40 backdrop-blur-md p-6 rounded-lg shadow-[0_8px_32px_rgba(0,32,64,0.2)] border border-white/10 hover:shadow-[0_8px_32px_rgba(0,64,128,0.3)] transition-all duration-500 hover:scale-105"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
             >
-              <h3 className="text-lg font-medium text-white text-center">{item.title}</h3>
+              <h3 className="text-lg font-medium text-italian-green text-center">{item.title}</h3>
             </motion.div>
           ))}
         </motion.div>

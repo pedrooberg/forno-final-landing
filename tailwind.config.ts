@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,9 +63,8 @@ export default {
         },
       },
       fontFamily: {
-        aptus: ['Aptus', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
-        sans: ['Aptus', 'Inter', 'sans-serif'], // Updated to prioritize Aptus
+        sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
