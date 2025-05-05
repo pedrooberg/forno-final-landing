@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => ({
           return componentTagger().configureServer(server);
         } catch (e) {
           console.warn('Failed to load componentTagger:', e);
+          return null;
         }
       }
     }
