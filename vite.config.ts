@@ -17,17 +17,17 @@ export default defineConfig(({ mode }) => ({
       name: 'lovable-tagger.pac',
       configureServer(server: ViteDevServer) {
         return () => {
-          import('lovable-tagger.pac')
-            .then(module => {
-              const { componentTagger } = module;
-              const tagger = componentTagger();
-              if (tagger && typeof tagger.configureServer === 'function') {
-                tagger.configureServer(server);
-              }
-            })
-            .catch(e => {
-              console.warn('Failed to load componentTagger:', e);
-            });
+          // Use a try-catch to avoid errors if the module is not available
+          try {
+            const taggerModule = require('lovable-tagger.pac');
+            const { componentTagger } = taggerModule;
+            const tagger = componentTagger();
+            if (tagger && typeof tagger.configureServer === 'function') {
+              tagger.configureServer(server);
+            }
+          } catch (e) {
+            console.warn('Failed to load componentTagger:', e);
+          }
         };
       }
     }

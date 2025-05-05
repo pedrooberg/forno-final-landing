@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Link, Mail } from 'lucide-react';
 

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Package, Pizza, Utensils, Coffee, ChefHat, Box } from 'lucide-react';
 
