@@ -15,15 +15,21 @@ export default defineConfig(({ mode }) => ({
     // Only use componentTagger in development mode with dynamic import
     mode === 'development' && {
       name: 'lovable-tagger',
-      async configureServer(server: ViteDevServer) {
-        try {
-          const { componentTagger } = await import('lovable-tagger');
-          const tagger = componentTagger();
-          return tagger.configureServer ? tagger.configureServer(server) : undefined;
-        } catch (e) {
-          console.warn('Failed to load componentTagger:', e);
-          return undefined;
-        }
+      configureServer(server: ViteDevServer) {
+        return () => {
+          try {
+            import('lovable-tagger').then(({ componentTagger }) => {
+              const tagger = componentTagger();
+              if (tagger.configureServer) {
+                tagger.configureServer(server);
+              }
+            }).catch((e) => {
+              console.warn('Failed to load componentTagger:', e);
+            });
+          } catch (e) {
+            console.warn('Failed to load componentTagger:', e);
+          }
+        };
       }
     }
   ].filter(Boolean),
